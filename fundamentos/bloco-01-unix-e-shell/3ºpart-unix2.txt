@@ -1,0 +1,66 @@
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ps
+    PID TTY          TIME CMD
+  16459 pts/0    00:00:00 bash
+  25372 pts/0    00:00:00 ps
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ sleep 30 &
+[1] 25375
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ps
+    PID TTY          TIME CMD
+  16459 pts/0    00:00:00 bash
+  25375 pts/0    00:00:00 sleep
+  25380 pts/0    00:00:00 ps
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ kill % 25375
+bash: kill: (25375) - Processo inexistente
+bash: kill: (25375) - Processo inexistente
+[1]+  Concluído              sleep 30
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ sleep 100 &
+[1] 25390
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ kill 25390
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ps
+    PID TTY          TIME CMD
+  16459 pts/0    00:00:00 bash
+  25411 pts/0    00:00:00 ps
+[1]+  Terminado               sleep 100
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ sleep 30
+^Z
+[1]+  Parado                  sleep 30
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ bg
+[1]+ sleep 30 &
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ sleep 300 &
+[2] 25475
+[1]   Concluído              sleep 30
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ sleep 200
+^Z
+[3]+  Parado                  sleep 200
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ sleep 100
+^Z
+[4]+  Parado                  sleep 100
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ jobs
+[2]   Executando              sleep 300 &
+[3]-  Parado                  sleep 200
+[4]+  Parado                  sleep 100
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ fg % 2
+sleep 100
+^Z
+[4]+  Parado                  sleep 100
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ jobs
+[2]   Executando              sleep 300 &
+[3]-  Parado                  sleep 200
+[4]+  Parado                  sleep 100
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ fg %2
+sleep 300
+^Z
+[2]+  Parado                  sleep 300
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ bg %4
+[4]- sleep 100 &
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ jobs
+[2]+  Parado                  sleep 300
+[3]   Parado                  sleep 200
+[4]-  Concluído              sleep 100
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ kill %2 %3 %4
+bash: kill: %4: trabalho não existe
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ jobs
+[2]-  Terminado               sleep 300
+[3]+  Terminado               sleep 200
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ 
+

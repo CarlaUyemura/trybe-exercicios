@@ -1,0 +1,57 @@
+carla@Pc-Trampo-Trybe:~/Documentos/teste$ mkdir unix_tests
+carla@Pc-Trampo-Trybe:~/Documentos/teste$ ls
+oi.txt  unix_tests
+carla@Pc-Trampo-Trybe:~/Documentos/teste$ cd unix_tests
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ touch trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ cp trybe.txt trybe_backup.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+trybe_backup.txt  trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ mv trybe.txt Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+trybe_backup.txt  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ mkdir backup
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+backup  trybe_backup.txt  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ mv trybe_backup.txt backup/
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+backup  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ mkdir backup2
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+backup  backup2  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ mv ../trube_backup.txt backup2/
+mv: não foi possível obter estado de '../trube_backup.txt': Arquivo ou diretório inexistente
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ mv ../trybe_backup.txt backup2/
+mv: não foi possível obter estado de '../trybe_backup.txt': Arquivo ou diretório inexistente
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+backup  backup2  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ cd backup
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests/backup$ mv trybe_backup.txt backup2/
+mv: não foi possível mover 'trybe_backup.txt' para 'backup2/': Não é um diretório
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests/backup$ mv trybe_backup.txt ../backup2/
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests/backup$ ls
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests/backup$ cd ..
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+backup  backup2  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ rmdir backup
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+backup2  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ mv backup2 backup
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+backup  Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ rm -rf backup
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ ls
+Trybe.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ touch skills.txt
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ head -5 skills.txt
+Internet
+Unix
+Bash
+HTML
+CSS
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ tail -4 skills.txt
+CSS
+JavaScript
+React
+SQL
+carla@Pc-Trampo-Trybe:~/Documentos/teste/unix_tests$ rm *.txt
+
