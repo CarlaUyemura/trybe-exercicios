@@ -127,3 +127,20 @@ console.log(!null); // true
 
 ///////////////////////
 console.log(!undefined); // true
+
+/////////////////////////////
+
+let status = "Aprovada";
+
+switch (status) {
+  case "Aprovada":
+    console.log("Parabéns você foi aprovada!");
+    break;
+  case "Reprovada":
+    console.log("Desculpe não foi dessa vez!");
+    break;
+  case "lista":
+    console.log("Parabéns você esta na lista de espera!");
+    break;  
+}
+
