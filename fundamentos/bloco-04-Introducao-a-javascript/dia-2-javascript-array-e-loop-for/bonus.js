@@ -29,3 +29,10 @@ for (let index = 1; index < numbers.length; index += 1) {
 
 ///////////////////////////
 
+const n = 9;
+
+let resultado = 100;
+for( let i = 0; i <= n; i += 1){
+  resultado -= i;
+}
+console.log(resultado);
