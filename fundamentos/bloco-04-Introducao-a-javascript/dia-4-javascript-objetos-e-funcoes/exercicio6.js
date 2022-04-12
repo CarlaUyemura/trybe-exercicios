@@ -12,5 +12,5 @@ let leitor = {
     },
   ],
 };
-
-console.log("O livro favorito de " + leitor.nome + " " +leitor.sobrenome + " se chama " + leitor.livrosFavoritos.titulo);
+let livro = leitor.livrosFavoritos[0];
+console.log("O livro favorito de " + leitor.nome + " " +leitor.sobrenome + " se chama " + livro.titulo);
