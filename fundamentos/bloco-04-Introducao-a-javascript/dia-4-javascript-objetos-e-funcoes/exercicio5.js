@@ -8,9 +8,18 @@ let info = {
   recorrente: "Sim",
   };
 
-  info.personagem = 'Margarida e Tio Patinhas';
-  info.origem = "Pato Donald e Christmas on Bear Mountain, Dell's Four Color Comics #178";
-  info.nota = 'Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPatinhas';
-  info.recorrente = "Ambos recorrentes";
+  let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: 'Christmas on Bear Mountain, Dell’s Four Color Comics #178',
+    nota: 'O último MacPatinhas',
+    recorrente: 'Sim',
+  };
+  
+  for(let i in info){
+    if(i == 'recorrente' && info.recorrente == info2.recorrente){
 
-  console.log(info);
+      console.log("Ambos recorrentes");
+  }else {
+      console.log(info[i] + ' e ' + info2[i]);
+  }
+  }
