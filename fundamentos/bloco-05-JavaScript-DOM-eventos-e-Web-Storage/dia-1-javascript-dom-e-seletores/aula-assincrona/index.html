@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p class = "classe" id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p class = "classe" id="second-paragraph">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "purple";
+      document.querySelector('#page-title').innerText = 'Anjos da Noite';
+      document.querySelector('#second-paragraph').innerText = 'Melhor filme do mundo!';
+      document.querySelector('#subtitle').innerText = 'Você não pode perder!';
+      const teste = document.querySelectorAll('.classe'); 
+      teste[0].style.color = 'red';
+      teste[1].style.color = 'blue';
+      const teste2 = document.querySelectorAll('h4');
+      teste2[0].style.color = "purple";
+    </script>
+  </body>
+</html>
