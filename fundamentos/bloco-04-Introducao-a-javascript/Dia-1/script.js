@@ -19,7 +19,7 @@ const patientEmail = 'ana@email.com';
 
 console.log(typeof patientId);
 console.log(typeof patientAge);
-
+?
 //////////////////////////////////////////////
 
 const base = 5;
