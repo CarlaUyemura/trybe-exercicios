@@ -1,0 +1,13 @@
+let titulo = document.querySelectorAll('h3');
+titulo[0].style.backgroundColor = "purple";
+titulo[1].style.backgroundColor = "purple";
+titulo[2].style.backgroundColor = "black";
+titulo[3].style.backgroundColor = "black";
+let tituloIndex = document.querySelector('h1');
+tituloIndex.style.backgroundColor = "lightGreen";
+let fundo1 = document.querySelectorAll('.emergency-tasks');
+fundo1[0].style.backgroundColor = "pink";
+let fundo2 = document.querySelectorAll('.no-emergency-tasks');
+fundo2[0].style.backgroundColor = "Yellow";
+let rodape = document.querySelector('footer');
+rodape.style.backgroundColor = "darkGreen";

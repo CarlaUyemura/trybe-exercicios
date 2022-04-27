@@ -1,0 +1,32 @@
+body{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main{
+  text-align: justify;
+}
+label {
+  display: inline-block;
+  margin-top: 10px;
+}
+button{
+  display: inline-block;
+  margin-top: 10px;
+}
+form {
+  border: 3px solid rgb(50, 125, 0);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: rgb(50, 125, 0);
+}
+
+h3 {
+  color: rgb(50, 125, 0);
+}
+
+input {
+  border-radius: 3px;
+  border: 1px solid rgb(50, 125, 0);
+}
