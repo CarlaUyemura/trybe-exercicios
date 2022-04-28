@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+  <title>TrybeTrip</title>
+</head>
+<body>
+  <header>
+    <h1>TrybeTrip</h1>
+  </header>
+  <main>
+    <form action="" method="get" id="form"  class="container" >
+<div class="mb-3">
+      <label for="name" class="form-label">Nome:
+        <input type="text" name="nome" id="name" class="form-control">
+      </label>
+      <div class="mb-3">
+      <label for="email" class="form-label">Email:
+        <input type="email" name="email" id="email" class="form-control" minlength="10" maxlength="50">
+      </label>
+    </div>
+</div>
+      <div>
+        <label for="cidade">
+        <input type="radio" name="opcao" id="cidade"> Cidade
+      </label>
+        <label for="campo">
+        <input type="radio" name="opcao" id="campo"> 
+        Campo
+      </label>
+        <label for="Praia">
+        <input type="radio" name="opcao" id="Praia"> Praia
+      </label>
+        <label for="montanha">
+        <input type="radio" name="opcao" id="montanha"> Montanhas
+      </label>
+      </div>
+      <div>
+        <p>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</p>
+        <textarea name="motivo" id="text" cols="40" rows="10" maxlength="500" class="form-control"></textarea>
+      </div>
+      <div><label for="date">Melhor data para viajar:</label>
+        <input type="date" name="data" id="date">
+      </div>
+      <div class="mb-3 form-check">
+      <label for="oferta"class="form-check-label">
+      <input type="checkbox" name="ofertas" id="oferta" class="form-check-input" >Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+    </label>
+  </div>
+  <div class="mb-3 form-check">
+    <label for="termo" class="form-check-label">
+    <input type="checkbox" name="termos" id="termo" class="form-check-input" >Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+  </label>
+  </div>
+  <div>
+    <button type="submit" id="btn-enviar" class="btn btn-primary">Enviar</button>
+    <button type="reset" class="btn btn-primary">Limpar</button>
+  </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+ </body>
+</html>
