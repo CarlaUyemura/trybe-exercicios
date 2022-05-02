@@ -1,14 +1,16 @@
 
-// const btnEnviar = document.querySelector("#btn-enviar");
+const btnEnviar = document.querySelector("#btn-enviar");
 
-// btnEnviar.addEventListener('click', function(event){
-//   event.preventDefault();
-// })
+btnEnviar.addEventListener('click', function(event){
+  event.preventDefault();
+})
 
 
 const validate = new JustValidate('#form');
 
-validate.addField( '#name' ,  [ 
+validate
+
+.addField( '#name' ,  [ 
     { 
       rule : 'minLength' , 
       value : 10 , 
