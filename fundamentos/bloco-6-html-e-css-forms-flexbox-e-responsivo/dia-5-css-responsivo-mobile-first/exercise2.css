@@ -5,3 +5,56 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+body {
+  margin: 10px;
+  background-color: rgb(215, 248, 249);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+}
+.ul-menu-container{
+  width: 100%;
+  font-size: 30px;
+  list-style: none;
+  display: flex;
+  justify-content:space-around;
+}
+
+.btn-menu{
+  background-color: rgb(236, 246, 123);
+  padding: 10px 32px;
+  box-shadow: 5px 5px 5px gray;
+}
+h2{
+  font-size: 35px;
+  text-align: center;
+}
+.ul-chapters-container{
+  font-size: 30px;
+}
+
+.ul-chapters-container2{
+  font-size: 25px;
+}
+
+.main-content p {
+  font-size: 30px;
+}
+li, p, h1 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  body{
+    background-color: rgb(231, 222, 169);
+  }
+}
+
+@media screen and (min-width: 900px) and (min-width: 1500px) {
+  body{
+    background-color: red;
+  }
+}
