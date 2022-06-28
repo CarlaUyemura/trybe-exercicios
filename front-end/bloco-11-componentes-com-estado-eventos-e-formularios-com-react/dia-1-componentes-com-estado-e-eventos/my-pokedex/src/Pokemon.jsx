@@ -7,11 +7,13 @@ class Pokemon extends React.Component {
     return (
       <div className="pokemon">
         <div>
-        <h2>{name}</h2>
-        <h3>{type}</h3>
-        <h3>{`${averageWeight.value} ${averageWeight.measurementUnit}`}</h3>
+        <h2>Name: {name}</h2>
+        <h3>Type: {type}</h3>
+        <h3>Average Weight: 
+          <br/>
+          {`${averageWeight.value} ${averageWeight.measurementUnit}`}</h3>
         </div>
-        <img src={image} alt={name} />
+        <img className="img" src={image} alt={name} />
       </div>
     )
   }
