@@ -24,7 +24,8 @@ class Pokedex extends React.Component {
 
     if(event.target.innerText === 'All') {
       this.setState({
-        allPokemons: pokemons
+        indexPokemon: 0,
+        allPokemons: pokemons,
       })
     } else {
     this.setState({
@@ -39,20 +40,24 @@ class Pokedex extends React.Component {
   render(){
     const {allPokemons, indexPokemon} = this.state
     return (
-      <div className="card">
-        {
-        allPokemons
-        .map((element) => <Pokemon pokemon={element} key={element.id}/>)[indexPokemon]
-        }
-        <button type="button" onClick={this.nextPokemon}>Próximo</button>
-        <button type="button" onClick={this.filterPokemon}>All</button> 
-        <button type="button" onClick={this.filterPokemon}>Electric</button> 
-        <button type="button" onClick={this.filterPokemon}>Fire</button> 
-        <button type="button" onClick={this.filterPokemon}>Bug</button> 
-        <button type="button" onClick={this.filterPokemon}>Poison</button> 
-        <button type="button" onClick={this.filterPokemon}>Psychic</button> 
-        <button type="button" onClick={this.filterPokemon}>Normal</button>
-        <button type="button" onClick={this.filterPokemon}>Dragon</button>
+        <div className="background">
+          <div className="card">
+            {
+            allPokemons
+            .map((element) => <Pokemon pokemon={element} key={element.id}/>)[indexPokemon]
+            }
+            </div>
+            <div className="buttons">
+                <button type="button" onClick={this.nextPokemon}>Próximo</button>
+                <button type="button" onClick={this.filterPokemon}>All</button> 
+                <button type="button" onClick={this.filterPokemon}>Electric</button> 
+                <button type="button" onClick={this.filterPokemon}>Fire</button> 
+                <button type="button" onClick={this.filterPokemon}>Bug</button> 
+                <button type="button" onClick={this.filterPokemon}>Poison</button> 
+                <button type="button" onClick={this.filterPokemon}>Psychic</button> 
+                <button type="button" onClick={this.filterPokemon}>Normal</button>
+                <button type="button" onClick={this.filterPokemon}>Dragon</button>
+            </div>
       </div>
     )
   }
