@@ -1,0 +1,12 @@
+{
+  "name": "simpsons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "simpsons.js",
+  "scripts": {
+    "simpsons": "node simpsons.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "carla uyemura",
+  "license": "ISC"
+}
