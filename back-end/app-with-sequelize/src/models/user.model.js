@@ -5,7 +5,12 @@ const UserModel = (sequelize, DataTypes) => {
     phoneNum: DataTypes.STRING,
   });
 
+  const teste = () => {
+
+  }
   return User;
 };
+
+
 
 module.exports = UserModel;
