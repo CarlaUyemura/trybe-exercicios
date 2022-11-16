@@ -1,11 +1,11 @@
-export class Tv {
+export default class Tv {
   brand: string;
   size: number;
   resolution: number;
   connections: string[];
   connectedTo?: string;
 
-  constructor(b: string, s:number, r:number, c:string[]){
+  constructor(b: string, s:number, r:number, c:string[]) {
     this.brand = b;
     this.size = s;
     this.resolution = r;
@@ -13,8 +13,8 @@ export class Tv {
   }
 
   turnOn():void {
-    console.log(`Tv: ${this.brand}, tamanho: ${this.size}, Resolução: ${this.resolution}, Conexão: ${this.connections}`);
-    
+    console.log(`Tv: ${this.brand}, 
+    tamanho: ${this.size}, 
+    Resolução: ${this.resolution}, Conexão: ${this.connections}`);
   }
 }
-
